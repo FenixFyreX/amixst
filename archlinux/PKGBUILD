@@ -1,0 +1,36 @@
+
+pkgname=amixst
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='A free and open source volume wheel using Alsa and Qt5.'
+arch=('i686' 'x86_64')
+license=('GPL3')
+
+depends=('qt5-base' 'alsa-lib')
+makedepends=('git' 'qt5-tools')
+provides=("${pkgname}=${pkgver}")
+
+sources=("${pkgname}-${pkgver}.tar.gz::https://github.com/FenixFyreX/amixst/archive/${pkgver}.tar.gz")
+
+md5sums=("d603599e0338a37e79f0e45974e68a87")
+
+prepare() {
+    mkdir "${srcdir}"/build
+}
+
+build() {
+    cd "${srcdir}"/build
+    qmake-qt5 ../amixst/src \
+        CONFIG+=release     \
+        -spec linux-g++
+    
+    make -j $(grep -c ^processor /proc/cpuinfo)
+}
+
+package() {
+    cd "${srcdir}"/build
+    make INSTALL_ROOT="${pkgdir}" install
+    
+    install -dm755 "${pkgdir}"/etc/amixst
+    install -m644 "${srcdir}"/amixst/etc/conf "${pkgdir}"/etc/amixst/conf
+}
