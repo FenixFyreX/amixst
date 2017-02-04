@@ -33,7 +33,7 @@ Generic Linux process:
 git clone https://github.com/FenixFyreX/amixst.git
 cd amixst
 mkdir build && cd build
-qt5-qmake ../src CONFIG+=release -spec=linux-g++
+qt5-qmake ../src/amixst.pro CONFIG+=release -spec=linux-g++
 make -j `grep -c ^processor /proc/cpuinfo`
 sudo install -m755 ./amixst /usr/bin
 mkdir ~/.config/amixst
