@@ -1,0 +1,31 @@
+; amixst Config Example
+; ---------------------
+; There are two sections available,
+; 
+; [app]
+; 
+; This is the style that QT should use when drawing amixst's widgets.
+; The default is usually fusion, unless qtchooser has been used to
+; alter it.
+; 
+; style = fusion
+; 
+; [icon]
+; 
+; This is the icon to use that will show in the system tray.
+; tray = /path/to/icon.png
+; 
+; Audio is muted
+; mute = /path/to/icon.png
+; 
+; Volume is < 25%
+; vol1 = /path/to/icon.png
+; 
+; Volume is between 25% and 50%
+; vol2 = /path/to/icon.png
+; 
+; Volume is between 50% and 75%
+; vol3 = /path/to/icon.png
+; 
+; Volume is >= 75%
+; vol4 = /path/to/icon.png
