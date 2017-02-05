@@ -23,9 +23,13 @@ amixst was written for systems running alsa. Usually this means some form of lin
 There is an Arch Linux PKGBUILD distributed with these files.
 Consider using it:
 ```
+yaourt -S amixst
+
+# OR
+
 mkdir amixst && curl https://raw.githubusercontent.com/FenixFyreX/amixst/master/archlinux/PKGBUILD > amixst/PKGBUILD
 cd amixst && makepkg
-pacman -S amixst-pkg.tar.gz
+pacman -U amixst-pkg.tar.gz
 ```
 
 Generic Linux process:
