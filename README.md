@@ -32,12 +32,15 @@ Generic Linux process:
 ```
 git clone https://github.com/FenixFyreX/amixst.git
 cd amixst
-mkdir build && cd build
+mkdir amixst/build && cd amixst/build
 qt5-qmake ../src/amixst.pro CONFIG+=release -spec=linux-g++
 make -j `grep -c ^processor /proc/cpuinfo`
 sudo install -m755 ./amixst /usr/bin
 mkdir ~/.config/amixst
 cp ../etc/conf ~/.config/amixst/conf
+sudo install -dm644 /usr/share/amixst
+sudo install -m755 ../LICENSE /usr/share/amixst
+sudo install -m755 ../COPYING /usr/share/amixst
 ```
 
 ## Usage

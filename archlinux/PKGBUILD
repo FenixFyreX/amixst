@@ -35,4 +35,8 @@ package() {
     
     install -dm644 "${pkgdir}"/etc/amixst
     install -m755 "${srcdir}/amixst-${pkgver}"/etc/conf "${pkgdir}"/etc/amixst/conf
+    
+    install -dm644 "${pkgdir}"/usr/share/amixst
+    install -m755 "${srcdir}/amixst-${pkgver}"/COPYING "${pkgdir}"/usr/share/amixst
+    install -m755 "${srcdir}/amixst-${pkgver}"/LICENSE "${pkgdir}"/usr/share/amixst
 }
