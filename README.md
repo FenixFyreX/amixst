@@ -48,6 +48,10 @@ It is recommended to start this program after your given window manager starts, 
 
 It is recommended that some form of system tray visualizer is in place so that the tray icon (and thus the entirety of this app) is accessible.
 
+## Config
+Along with the program comes a config file which will be located at: `/etc/amixst/conf`
+This file can be copied to `~/.config/amixst/conf` and edited. The config file will tell you what it can do.
+
 ## Bug Reports / Feature Requests
 If an issue is found or you have a feature suggestion, the defacto [github issue tracker](https://github.com/FenixFyreX/amixst/issues) can be used.
 
